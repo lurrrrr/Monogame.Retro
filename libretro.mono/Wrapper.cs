@@ -21,27 +21,28 @@ namespace libretro.mono
 		
 		[DllImport(corefile)]
 		private static extern void retro_get_system_info(ref retro_system_info info);
-
-		[DllImport(corefile)]
-		private static extern void retro_set_environment(RetroEnvironmentDelegate r);
-
+		
 		[DllImport(corefile)]
 		private static extern void retro_load_game(ref retro_game_info game);
 
 		[DllImport(corefile)]
-		private static extern void retro_run();
-
+		private static extern void retro_set_environment(RetroEnvironmentDelegate r);
 		unsafe delegate bool RetroEnvironmentDelegate(byte cmd, void *data);
-		
+
+		[DllImport(corefile)]
+		private static extern void retro_set_video_refresh(RetroVideoRefresh r);
+		unsafe delegate void RetroVideoRefresh(void *data, byte width, byte height, byte pitch);
+
+		[DllImport(corefile)]
+		private static extern void retro_run();				
+
 		[StructLayout(LayoutKind.Sequential)]
 		private unsafe struct retro_game_info
 		{
-			public string path; // Path to game, UTF-8 encoded. Usually used as a reference.
-			// May be NULL if rom was loaded from stdin or similar.
-			// retro_system_info::need_fullpath guaranteed that this path is valid.
-			public void *data; // Memory buffer of loaded game. Will be NULL if need_fullpath was set.
-			//size_t size; // Size of memory buffer.
-			public char *meta; // String of implementation specific meta-data.
+			public string path; 
+			public void *data; 
+			byte size; 
+			public char *meta; 
 		};
 		
 		[StructLayout(LayoutKind.Sequential)]
@@ -58,7 +59,6 @@ namespace libretro.mono
 			public bool block_extract;
 		}
 
-		static RetroEnvironmentDelegate environ_cb;
 
 
 
@@ -84,18 +84,21 @@ namespace libretro.mono
 			retro_game_info gameInfo = new retro_game_info();
 			gameInfo.path = "Y:\\mmx.sfc";
 
+			RetroEnvironmentDelegate environ_cb = null;
+			RetroVideoRefresh vr = null;
 
 
+
+			retro_init();
 			retro_set_environment(environ_cb);
-
-			//retro_init();
+			retro_set_video_refresh(vr);
 			retro_load_game(ref gameInfo);
 
 			
 		}
 		public static void Run()
 		{
-			retro_run ();
+			retro_run();
 		}
 	}
 }

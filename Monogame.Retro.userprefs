@@ -1,12 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="retroConsole\Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="libretro.mono\Wrapper.cs">
     <Files>
-      <File FileName="libretro.mono\Wrapper.cs" Line="67" Column="1" />
+      <File FileName="libretro.mono\Wrapper.cs" Line="36" Column="1" />
       <File FileName="libretro.utilities\Utilities.cs" Line="8" Column="4" />
-      <File FileName="retroConsole\Main.cs" Line="17" Column="19" />
+      <File FileName="retroConsole\Main.cs" Line="16" Column="1" />
       <File FileName="retroWindows\Game1.cs" Line="41" Column="40" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="libretro.mono" expanded="True">
+            <Node name="Wrapper.cs" selected="True" />
+          </Node>
+          <Node name="libretro.utilities" expanded="True" />
+          <Node name="retroConsole" expanded="True" />
+          <Node name="retroWindows" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
