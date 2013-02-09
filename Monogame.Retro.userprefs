@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="retroConsole\Main.cs">
+    <Files>
+      <File FileName="libretro.mono\Wrapper.cs" Line="67" Column="1" />
+      <File FileName="libretro.utilities\Utilities.cs" Line="8" Column="4" />
+      <File FileName="retroConsole\Main.cs" Line="17" Column="19" />
+      <File FileName="retroWindows\Game1.cs" Line="41" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
