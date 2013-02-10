@@ -227,10 +227,16 @@ namespace libretro.mono
 			RetroInputPoll _inputPoll = new RetroInputPoll(RetroInputPollDelegate);
 			RetroInputState _inputState = new RetroInputState(RetroInputStateDelegate);
 			retro_set_environment(_environment);
+			retro_set_video_refresh(_videoRefresh);
+			retro_set_audio_sample(_audioSample);
+			retro_set_audio_sample_batch(_audioSampleBatch);
+			retro_set_input_poll(_inputPoll);
+			retro_set_input_state(_inputState);
 
             retro_init();
 			retro_game_info gameInfo = new retro_game_info();
             retro_load_game(ref gameInfo);
+
 
 
 			retro_system_av_info av = new retro_system_av_info();
