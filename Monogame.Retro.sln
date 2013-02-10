@@ -11,26 +11,55 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "retroConsole", "retroConsol
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
 		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Win32.ActiveCfg = Debug|Any CPU
 		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Win32.ActiveCfg = Release|Any CPU
 		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.ActiveCfg = Release|Any CPU
 		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.Build.0 = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Win32.ActiveCfg = Debug|Any CPU
 		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Win32.ActiveCfg = Release|Any CPU
 		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.ActiveCfg = Release|Any CPU
 		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.Build.0 = Release|Any CPU
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|Win32.ActiveCfg = Debug|x86
 		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|x86.ActiveCfg = Debug|x86
 		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|x86.Build.0 = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|Win32.ActiveCfg = Release|x86
 		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|x86.ActiveCfg = Release|x86
 		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|x86.Build.0 = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Win32.ActiveCfg = Debug|x86
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.ActiveCfg = Debug|x86
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.Build.0 = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Win32.ActiveCfg = Release|x86
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.ActiveCfg = Release|x86
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = retroConsole\retroConsole.csproj
