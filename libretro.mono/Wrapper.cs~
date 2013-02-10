@@ -113,17 +113,17 @@ namespace libretro.mono
 		}
 
 		//typedef void (*retro_input_poll_t)(void);
-		public unsafe delegate void RetroInputPoll();
+		public delegate void RetroInputPoll();
 
-		public unsafe static void RetroInputPollDelegate()
+		public static void RetroInputPollDelegate()
 		{
 			return;
 		}
 
 		//typedef int16_t (*retro_input_state_t)(unsigned port, unsigned device, unsigned index, unsigned id);
-		public unsafe delegate Int16 RetroInputState(uint port, uint device, uint index, uint id);
+		public delegate Int16 RetroInputState(uint port, uint device, uint index, uint id);
 
-		public unsafe static Int16 RetroInputStateDelegate(uint port, uint device, uint index, uint id)
+		public static Int16 RetroInputStateDelegate(uint port, uint device, uint index, uint id)
 		{
 			return 0;
 		}
@@ -176,7 +176,7 @@ namespace libretro.mono
         public static extern void retro_get_system_av_info(ref retro_system_av_info info);
 		
 		[DllImport(corefile)]
-		public static extern bool retro_load_game(ref retro_game_info game);
+		public static extern void retro_load_game(ref retro_game_info game);
 
 		[DllImport(corefile)]
 		public static extern void retro_set_video_refresh(RetroVideoRefresh r);
@@ -194,7 +194,7 @@ namespace libretro.mono
 		public static extern void retro_set_input_state(RetroInputState r);
 
 		[DllImport(corefile)]
-		public static extern void retro_set_environment(RetroEnvironment r);
+		public static extern bool retro_set_environment(RetroEnvironment r);
 
 		[DllImport(corefile)]
 		public static extern void retro_run();				
@@ -220,6 +220,8 @@ namespace libretro.mono
 			Console.WriteLine("Block Extraction: " + _blockExtract);
 			Console.WriteLine("Requires Full Path: " + _requiresFullPath);
 
+			retro_init();
+
 			RetroEnvironment _environment = new RetroEnvironment(RetroEnvironmentDelegate);
 			RetroVideoRefresh _videoRefresh = new RetroVideoRefresh(RetroVideoRefreshDelegate);
 			RetroAudioSample _audioSample = new RetroAudioSample(RetroAudioSampleDelegate);
@@ -233,7 +235,7 @@ namespace libretro.mono
 			retro_set_input_poll(_inputPoll);
 			retro_set_input_state(_inputState);
 
-            retro_init();
+            
 			retro_game_info gameInfo = new retro_game_info();
             retro_load_game(ref gameInfo);
 
