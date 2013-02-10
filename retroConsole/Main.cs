@@ -11,6 +11,7 @@ namespace RetroConsole
 			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\");
 			Console.WriteLine ("Hello libretro");
 			Wrapper.Init();
+            
 		}
 	}
 }

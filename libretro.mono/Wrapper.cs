@@ -25,7 +25,9 @@ namespace libretro.mono
 		//public const string corefile = "libretro-0926-mednafen-psx-x86.dll";
 		//public const string corefile = "libretro-089-bsnes-compat-x86.dll";
         //public const string corefile = "libretro-test-lex-x86_64.dll";
-		public const string corefile = "retro.dll";
+		//public const string corefile = "retro_64.dll";
+        public const string corefile = "retro_32.dll";
+        //public const string corefile = "retro_custom.dll";
 
 		[StructLayout(LayoutKind.Sequential)]
 		public unsafe struct retro_variable
@@ -66,10 +68,10 @@ namespace libretro.mono
 		[StructLayout(LayoutKind.Sequential)]
 		public struct retro_game_geometry
 		{
-			public byte base_width; 
-			public byte base_height;
-			public byte max_width;
-			public byte max_height;
+			public uint base_width; 
+			public uint base_height;
+            public uint max_width;
+            public uint max_height;
 			
 			public float aspect_ratio; 
 		}
@@ -132,7 +134,8 @@ namespace libretro.mono
 		public unsafe delegate bool RetroEnvironment(uint cmd, void *data);
 
 		public unsafe static bool RetroEnvironmentDelegate(uint cmd, void *data)
-		{	
+		{
+            Console.WriteLine("Callback Test");
 			switch (cmd)
 			{
 			case RETRO_ENVIRONMENT_GET_OVERSCAN:
@@ -176,7 +179,7 @@ namespace libretro.mono
         public static extern void retro_get_system_av_info(ref retro_system_av_info info);
 		
 		[DllImport(corefile)]
-		public static extern void retro_load_game(ref retro_game_info game);
+		public static extern bool retro_load_game(ref retro_game_info game);
 
 		[DllImport(corefile)]
 		public static extern void retro_set_video_refresh(RetroVideoRefresh r);
@@ -243,6 +246,7 @@ namespace libretro.mono
 
 			retro_system_av_info av = new retro_system_av_info();
 			retro_get_system_av_info(ref av);
+            Console.Read();
 
             
 		}
