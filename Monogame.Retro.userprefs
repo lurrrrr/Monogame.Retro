@@ -2,10 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="libretro.mono\Wrapper.cs">
     <Files>
-      <File FileName="libretro.mono\Wrapper.cs" Line="249" Column="1" />
-      <File FileName="libretro.utilities\Utilities.cs" Line="8" Column="4" />
-      <File FileName="retroConsole\Main.cs" Line="12" Column="41" />
-      <File FileName="retroWindows\Game1.cs" Line="41" Column="40" />
+      <File FileName="libretro.mono\Wrapper.cs" Line="29" Column="9" />
+      <File FileName="retroConsole\Main.cs" Line="14" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +13,6 @@
           </Node>
           <Node name="libretro.utilities" expanded="True" />
           <Node name="retroConsole" expanded="True" />
-          <Node name="retroWindows" expanded="True" />
         </State>
       </Pad>
     </Pads>

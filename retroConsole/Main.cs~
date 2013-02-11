@@ -9,8 +9,10 @@ namespace RetroConsole
 		public static void Main (string[] args)
 		{
 			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\");
-			Console.WriteLine ("Hello libretro");
 			Wrapper.Init();
+			Wrapper.Run();
+			Console.WriteLine("Press any key...");
+            
 		}
 	}
 }

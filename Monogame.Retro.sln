@@ -58,10 +58,10 @@ Global
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.ActiveCfg = Release|x86
 		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = retroConsole\retroConsole.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

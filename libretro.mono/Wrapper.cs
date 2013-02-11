@@ -27,7 +27,7 @@ namespace libretro.mono
         //public const string corefile = "libretro-test-lex-x86_64.dll";
 		//public const string corefile = "retro_64.dll";
         public const string corefile = "retro_32.dll";
-        //public const string corefile = "retro_custom.dll";
+        //public const string corefile = "retro.dll";
 
 		[StructLayout(LayoutKind.Sequential)]
 		public unsafe struct retro_variable
@@ -135,7 +135,7 @@ namespace libretro.mono
 
 		public unsafe static bool RetroEnvironmentDelegate(uint cmd, void *data)
 		{
-            Console.WriteLine("Callback Test");
+            Console.WriteLine("callback");
 			switch (cmd)
 			{
 			case RETRO_ENVIRONMENT_GET_OVERSCAN:
@@ -216,6 +216,8 @@ namespace libretro.mono
 			bool _requiresFullPath = info.need_fullpath;
 			bool _blockExtract = info.block_extract;
 
+			Console.WriteLine("Core information:");
+
 			Console.WriteLine("API Version: " + _apiVersion);
 			Console.WriteLine("Core Name: " + _coreName);
 			Console.WriteLine("Core Version: " + _coreVersion);
@@ -223,7 +225,7 @@ namespace libretro.mono
 			Console.WriteLine("Block Extraction: " + _blockExtract);
 			Console.WriteLine("Requires Full Path: " + _requiresFullPath);
 
-			retro_init();
+
 
 			RetroEnvironment _environment = new RetroEnvironment(RetroEnvironmentDelegate);
 			RetroVideoRefresh _videoRefresh = new RetroVideoRefresh(RetroVideoRefreshDelegate);
@@ -231,6 +233,9 @@ namespace libretro.mono
 			RetroAudioSampleBatch _audioSampleBatch = new RetroAudioSampleBatch(RetroAudioSampleBatchDelegate);
 			RetroInputPoll _inputPoll = new RetroInputPoll(RetroInputPollDelegate);
 			RetroInputState _inputState = new RetroInputState(RetroInputStateDelegate);
+
+			Console.WriteLine("\nSetting up environment:");
+
 			retro_set_environment(_environment);
 			retro_set_video_refresh(_videoRefresh);
 			retro_set_audio_sample(_audioSample);
@@ -238,21 +243,37 @@ namespace libretro.mono
 			retro_set_input_poll(_inputPoll);
 			retro_set_input_state(_inputState);
 
-            
+			Console.WriteLine("\nInitializing:");
+			retro_init();
+
+			Console.WriteLine("\nLoading rom:");
 			retro_game_info gameInfo = new retro_game_info();
             retro_load_game(ref gameInfo);
-
-
+			Console.WriteLine("\nSystem information:");
 
 			retro_system_av_info av = new retro_system_av_info();
 			retro_get_system_av_info(ref av);
-            Console.Read();
-
-            
+			Console.WriteLine("Geometry:");
+			Console.WriteLine("Base width: " + av.geometry.base_width);
+			Console.WriteLine("Base height: " + av.geometry.base_height);
+			Console.WriteLine("Max width: " + av.geometry.max_width);
+			Console.WriteLine("Max height: " + av.geometry.max_height);
+			Console.WriteLine("Aspect ratio: " + av.geometry.aspect_ratio);
+			Console.WriteLine("Geometry:");
+			Console.WriteLine("Target fps: " + av.timing.fps);
+			Console.WriteLine("Sample rate " + av.timing.sample_rate);
+                       
 		}
 		public static void Run()
 		{
-			//retro_run();
+			Console.WriteLine("\nStarting:");
+			retro_run();
+		}
+
+		static Wrapper()
+		{
+			Console.WriteLine("Hello libretro\n");
+			return;
 		}
 	}
 }
