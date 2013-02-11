@@ -187,8 +187,11 @@ static void render_audio(void)
 
 void retro_run(void)
 {
+   fprintf(stderr, "run_1");
    update_input();
+   fprintf(stderr, "run_2");
    render_checkered();
+   fprintf(stderr, "run_3");
    render_audio();
 }
 
@@ -209,19 +212,24 @@ bool retro_load_game(const struct retro_game_info *info)
       { 0 },
    };
 
+   fprintf(stderr, "load_game_1");
    environ_cb(RETRO_ENVIRONMENT_SET_INPUT_DESCRIPTORS, desc);
 
-   enum retro_pixel_format fmt = RETRO_PIXEL_FORMAT_RGB565;
+   fprintf(stderr, "load_game_2");
+   enum retro_pixel_format fmt = RETRO_PIXEL_FORMAT_RGB565; 
    if (!environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &fmt))
    {
       fprintf(stderr, "RGB565 is not supported.\n");
       return false;
    }
 
+   fprintf(stderr, "load_game_3");
    struct retro_keyboard_callback cb = { keyboard_cb };
    environ_cb(RETRO_ENVIRONMENT_SET_KEYBOARD_CALLBACK, &cb);
 
+   fprintf(stderr, "load_game_4");
    (void)info;
+   fprintf(stderr, "load_game_5");
    return true;
 }
 
