@@ -1,5 +1,0 @@
-Name: libretro-test
-Description: 
-Version: 0.1
-Libs: -L"C:\Working\Repositories\GitHub\External\Monogame.Retro\libretro-test\bin\Debug" -lretro-test
-Cflags: -I"C:\Working\Repositories\GitHub\External\Monogame.Retro\libretro-test"

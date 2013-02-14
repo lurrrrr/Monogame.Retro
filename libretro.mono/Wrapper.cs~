@@ -25,8 +25,8 @@ namespace libretro.mono
 		//public const string corefile = "libretro-0926-mednafen-psx-x86.dll";
 		//public const string corefile = "libretro-089-bsnes-compat-x86.dll";
         //public const string corefile = "libretro-test-lex-x86_64.dll";
-		//public const string corefile = "retro_64.dll";
-        public const string corefile = "retro_32.dll";
+		public const string corefile = "retro_64.dll";
+        //public const string corefile = "retro_32.dll";
         //public const string corefile = "retro.dll";
 
 		[StructLayout(LayoutKind.Sequential)]
@@ -95,7 +95,8 @@ namespace libretro.mono
 
 		public unsafe static void RetroVideoRefreshDelegate(void *data, uint width, uint  height, uint pitch)
 		{
-			return;
+			Console.WriteLine("video callback");
+			//return;
 		}
 
 		//typedef void (*retro_audio_sample_t)(int16_t left, int16_t right);
@@ -103,7 +104,10 @@ namespace libretro.mono
 
 		public unsafe static void RetroAudioSampleDelegate(Int16 left, Int16 right)
 		{
-			return;
+			Console.WriteLine("audio callback");
+			Console.WriteLine("left="+left);
+			Console.WriteLine("right="+right);
+			//return;
 		}
 
 		//typedef size_t (*retro_audio_sample_batch_t)(const int16_t *data, size_t frames);
@@ -111,7 +115,8 @@ namespace libretro.mono
 
 		public unsafe static void RetroAudioSampleBatchDelegate(Int16 *data, uint frames)
 		{
-			return;
+			Console.WriteLine("audiobatch callback");
+			//return;
 		}
 
 		//typedef void (*retro_input_poll_t)(void);
@@ -119,7 +124,8 @@ namespace libretro.mono
 
 		public static void RetroInputPollDelegate()
 		{
-			return;
+			Console.WriteLine("input poll callback");
+			//return;
 		}
 
 		//typedef int16_t (*retro_input_state_t)(unsigned port, unsigned device, unsigned index, unsigned id);
@@ -127,6 +133,7 @@ namespace libretro.mono
 
 		public static Int16 RetroInputStateDelegate(uint port, uint device, uint index, uint id)
 		{
+			Console.WriteLine("input state callback");
 			return 0;
 		}
 
@@ -135,7 +142,7 @@ namespace libretro.mono
 
 		public unsafe static bool RetroEnvironmentDelegate(uint cmd, void *data)
 		{
-            Console.WriteLine("callback");
+            Console.WriteLine("environment callback");
 			switch (cmd)
 			{
 			case RETRO_ENVIRONMENT_GET_OVERSCAN:
@@ -268,6 +275,7 @@ namespace libretro.mono
 		{
 			Console.WriteLine("\nStarting:");
 			retro_run();
+
 		}
 
 		static Wrapper()

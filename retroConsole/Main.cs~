@@ -8,10 +8,18 @@ namespace RetroConsole
 	{
 		public static void Main (string[] args)
 		{
-			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\");
+#if _WIN64 
+			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\x86_64\\");
+#else
+			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\x86\\");
+#endif
+
 			Wrapper.Init();
+			Console.WriteLine("Press any key to start...");
+			Console.ReadKey();
 			Wrapper.Run();
-			Console.WriteLine("Press any key...");
+			Console.WriteLine("Press any key to exit...");
+			Console.ReadKey();
             
 		}
 	}

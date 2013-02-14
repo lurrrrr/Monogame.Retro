@@ -2,15 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="libretro.mono\Wrapper.cs">
     <Files>
-      <File FileName="libretro.mono\Wrapper.cs" Line="29" Column="9" />
-      <File FileName="retroConsole\Main.cs" Line="14" Column="42" />
+      <File FileName="libretro.mono\Wrapper.cs" Line="258" Column="1" />
+      <File FileName="retroConsole\Main.cs" Line="16" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="libretro.mono" expanded="True">
-            <Node name="Wrapper.cs" selected="True" />
-          </Node>
+          <Node name="libretro.mono" expanded="True" selected="True" />
           <Node name="libretro.utilities" expanded="True" />
           <Node name="retroConsole" expanded="True" />
         </State>
