@@ -20,15 +20,15 @@ namespace libretro.mono
 		const uint RETRO_ENVIRONMENT_SET_PIXEL_FORMAT=10;
 		const uint RETRO_ENVIRONMENT_SET_INPUT_DESCRIPTORS=11;
 		const uint RETRO_ENVIRONMENT_SET_KEYBOARD_CALLBACK=12;
-
-
+		
+		
 		//public const string corefile = "libretro-0926-mednafen-psx-x86.dll";
 		//public const string corefile = "libretro-089-bsnes-compat-x86.dll";
-        //public const string corefile = "libretro-test-lex-x86_64.dll";
+		//public const string corefile = "libretro-test-lex-x86_64.dll";
 		//public const string corefile = "retro_64.dll";
-        public const string corefile = "__Internal";
-        //public const string corefile = "retro.dll";
-
+		public const string corefile = "__Internal";
+		//public const string corefile = "retro.dll";
+		
 		[StructLayout(LayoutKind.Sequential)]
 		public unsafe struct retro_variable
 		{
@@ -41,7 +41,7 @@ namespace libretro.mono
 			public char *msg; 
 			public uint frames; 
 		};
-
+		
 		[StructLayout(LayoutKind.Sequential)]
 		public unsafe struct retro_game_info
 		{
@@ -70,8 +70,8 @@ namespace libretro.mono
 		{
 			public uint base_width; 
 			public uint base_height;
-            public uint max_width;
-            public uint max_height;
+			public uint max_width;
+			public uint max_height;
 			
 			public float aspect_ratio; 
 		}
@@ -89,53 +89,60 @@ namespace libretro.mono
 			public retro_game_geometry geometry;
 			public retro_system_timing timing;
 		}
-
+		
 		//typedef void (*retro_video_refresh_t)(const void *data, unsigned width, unsigned height, size_t pitch);
 		public unsafe delegate void RetroVideoRefresh(void *data, uint width, uint  height, uint pitch);
-
+		
 		public unsafe static void RetroVideoRefreshDelegate(void *data, uint width, uint  height, uint pitch)
 		{
-			return;
+			Console.WriteLine("video callback");
+			//return;
 		}
-
+		
 		//typedef void (*retro_audio_sample_t)(int16_t left, int16_t right);
 		public unsafe delegate void RetroAudioSample(Int16 left, Int16 right);
-
+		
 		public unsafe static void RetroAudioSampleDelegate(Int16 left, Int16 right)
 		{
-			return;
+			Console.WriteLine("audio callback");
+			Console.WriteLine("left="+left);
+			Console.WriteLine("right="+right);
+			//return;
 		}
-
+		
 		//typedef size_t (*retro_audio_sample_batch_t)(const int16_t *data, size_t frames);
 		public unsafe delegate void RetroAudioSampleBatch(Int16 *data, uint frames);
-
+		
 		public unsafe static void RetroAudioSampleBatchDelegate(Int16 *data, uint frames)
 		{
-			return;
+			Console.WriteLine("audiobatch callback");
+			//return;
 		}
-
+		
 		//typedef void (*retro_input_poll_t)(void);
 		public delegate void RetroInputPoll();
-
+		
 		public static void RetroInputPollDelegate()
 		{
-			return;
+			Console.WriteLine("input poll callback");
+			//return;
 		}
-
+		
 		//typedef int16_t (*retro_input_state_t)(unsigned port, unsigned device, unsigned index, unsigned id);
 		public delegate Int16 RetroInputState(uint port, uint device, uint index, uint id);
-
+		
 		public static Int16 RetroInputStateDelegate(uint port, uint device, uint index, uint id)
 		{
+			Console.WriteLine("input state callback");
 			return 0;
 		}
-
+		
 		//typedef bool (*retro_environment_t)(unsigned cmd, void *data);
 		public unsafe delegate bool RetroEnvironment(uint cmd, void *data);
-
+		
 		public unsafe static bool RetroEnvironmentDelegate(uint cmd, void *data)
 		{
-            Console.WriteLine("callback");
+			Console.WriteLine("environment callback");
 			switch (cmd)
 			{
 			case RETRO_ENVIRONMENT_GET_OVERSCAN:
@@ -165,7 +172,7 @@ namespace libretro.mono
 			}
 			return true;
 		}
-
+		
 		[DllImport(corefile)]
 		public static extern int retro_api_version();
 		
@@ -174,83 +181,83 @@ namespace libretro.mono
 		
 		[DllImport(corefile)]
 		public static extern void retro_get_system_info(ref retro_system_info info);
-
-        [DllImport(corefile)]
-        public static extern void retro_get_system_av_info(ref retro_system_av_info info);
+		
+		[DllImport(corefile)]
+		public static extern void retro_get_system_av_info(ref retro_system_av_info info);
 		
 		[DllImport(corefile)]
 		public static extern bool retro_load_game(ref retro_game_info game);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_set_video_refresh(RetroVideoRefresh r);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_set_audio_sample(RetroAudioSample r);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_set_audio_sample_batch(RetroAudioSampleBatch r);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_set_input_poll(RetroInputPoll r);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_set_input_state(RetroInputState r);
-
+		
 		[DllImport(corefile)]
 		public static extern bool retro_set_environment(RetroEnvironment r);
-
+		
 		[DllImport(corefile)]
 		public static extern void retro_run();				
-
-
-
+		
+		
+		
 		public unsafe static void Init ()
 		{
 			int _apiVersion = retro_api_version();
 			retro_system_info info = new retro_system_info();
 			retro_get_system_info(ref info);
-	
+			
 			string _coreName = Marshal.PtrToStringAnsi((IntPtr)info.library_name);
 			string _coreVersion = Marshal.PtrToStringAnsi((IntPtr)info.library_version);
 			string _validExtensions = Marshal.PtrToStringAnsi((IntPtr)info.valid_extensions);
 			bool _requiresFullPath = info.need_fullpath;
 			bool _blockExtract = info.block_extract;
-
+			
 			Console.WriteLine("Core information:");
-
+			
 			Console.WriteLine("API Version: " + _apiVersion);
 			Console.WriteLine("Core Name: " + _coreName);
 			Console.WriteLine("Core Version: " + _coreVersion);
 			Console.WriteLine("Valid Extensions: " + _validExtensions);
 			Console.WriteLine("Block Extraction: " + _blockExtract);
 			Console.WriteLine("Requires Full Path: " + _requiresFullPath);
-
-
-
+			
+			
+			
 			RetroEnvironment _environment = new RetroEnvironment(RetroEnvironmentDelegate);
 			RetroVideoRefresh _videoRefresh = new RetroVideoRefresh(RetroVideoRefreshDelegate);
 			RetroAudioSample _audioSample = new RetroAudioSample(RetroAudioSampleDelegate);
 			RetroAudioSampleBatch _audioSampleBatch = new RetroAudioSampleBatch(RetroAudioSampleBatchDelegate);
 			RetroInputPoll _inputPoll = new RetroInputPoll(RetroInputPollDelegate);
 			RetroInputState _inputState = new RetroInputState(RetroInputStateDelegate);
-
+			
 			Console.WriteLine("\nSetting up environment:");
-
+			
 			retro_set_environment(_environment);
 			retro_set_video_refresh(_videoRefresh);
 			retro_set_audio_sample(_audioSample);
 			retro_set_audio_sample_batch(_audioSampleBatch);
 			retro_set_input_poll(_inputPoll);
 			retro_set_input_state(_inputState);
-
+			
 			Console.WriteLine("\nInitializing:");
 			retro_init();
-
+			
 			Console.WriteLine("\nLoading rom:");
 			retro_game_info gameInfo = new retro_game_info();
-            retro_load_game(ref gameInfo);
+			retro_load_game(ref gameInfo);
 			Console.WriteLine("\nSystem information:");
-
+			
 			retro_system_av_info av = new retro_system_av_info();
 			retro_get_system_av_info(ref av);
 			Console.WriteLine("Geometry:");
@@ -262,14 +269,16 @@ namespace libretro.mono
 			Console.WriteLine("Geometry:");
 			Console.WriteLine("Target fps: " + av.timing.fps);
 			Console.WriteLine("Sample rate " + av.timing.sample_rate);
-                       
+			
 		}
 		public static void Run()
 		{
 			Console.WriteLine("\nStarting:");
 			retro_run();
+			Console.WriteLine("\nDone:");
+			
 		}
-
+		
 		static Wrapper()
 		{
 			Console.WriteLine("Hello libretro\n");

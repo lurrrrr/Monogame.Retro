@@ -45,7 +45,4 @@
   <ItemGroup>
     <Compile Include="Wrapper.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="libretro.a" />
-  </ItemGroup>
 </Project>

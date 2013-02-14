@@ -33,6 +33,7 @@ namespace retroTouch
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 			Wrapper.Init();
+			Wrapper.Run();
 		}
 		
 		public override void ViewDidUnload ()
