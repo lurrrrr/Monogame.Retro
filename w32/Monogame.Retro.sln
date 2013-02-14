@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libretro.mono", "libretro.mono\libretro.mono.csproj", "{3D64918B-B584-45E6-9688-8A046EB26FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libretro.utilities", "libretro.utilities\libretro.utilities.csproj", "{49384DDB-FD5C-47C8-BD08-E4B824187FE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "retroConsole", "retroConsole\retroConsole.csproj", "{6B441813-A82D-46DF-92DA-6366B3376F64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x64.ActiveCfg = Debug|x64
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x64.Build.0 = Debug|x64
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.ActiveCfg = Debug|x86
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.Build.0 = Debug|x86
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x64.ActiveCfg = Release|x64
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x64.Build.0 = Release|x64
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.ActiveCfg = Release|x86
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.Build.0 = Release|x86
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x64.ActiveCfg = Debug|x64
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x64.Build.0 = Debug|x64
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.ActiveCfg = Debug|x86
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.Build.0 = Debug|x86
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x64.ActiveCfg = Release|x64
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x64.Build.0 = Release|x64
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.ActiveCfg = Release|x86
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.Build.0 = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x64.ActiveCfg = Debug|x64
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x64.Build.0 = Debug|x64
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.ActiveCfg = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.Build.0 = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x64.ActiveCfg = Release|x64
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x64.Build.0 = Release|x64
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.ActiveCfg = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = retroConsole\retroConsole.csproj
+	EndGlobalSection
+EndGlobal

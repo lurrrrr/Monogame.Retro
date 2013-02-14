@@ -8,12 +8,9 @@ namespace RetroConsole
 	{
 		public static void Main (string[] args)
 		{
-#if _WIN64 
-			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\x86_64\\");
-#else
-			Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\x86\\");
-#endif
 
+			//Utilities.AddEnvironmentPaths("..\\..\\..\\cores\\x86_64\\");
+            Utilities.AddEnvironmentPaths("..\\..\\..\\..\\cores\\x86\\");           
 			Wrapper.Init();
 			Console.WriteLine("Press any key to start...");
 			Console.ReadKey();
