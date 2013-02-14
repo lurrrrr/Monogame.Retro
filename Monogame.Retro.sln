@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
@@ -229,3 +230,118 @@ Global
 		$34.inheritsSet = Mono
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libretro.mono", "libretro.mono\libretro.mono.csproj", "{3D64918B-B584-45E6-9688-8A046EB26FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libretro.utilities", "libretro.utilities\libretro.utilities.csproj", "{49384DDB-FD5C-47C8-BD08-E4B824187FE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "retroWindows", "retroWindows\retroWindows.csproj", "{4B9A9A4A-7860-4628-84F0-2F96847608EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "retroConsole", "retroConsole\retroConsole.csproj", "{6B441813-A82D-46DF-92DA-6366B3376F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libretro.monotouch", "libretro.monotouch\libretro.monotouch.csproj", "{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "retroTouch", "retroTouch\retroTouch.csproj", "{285BADF6-5FF0-4791-A677-0E36DF014453}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|iPhone.Build.0 = Debug|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|Mixed Platforms.Build.0 = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|Win32.ActiveCfg = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|Win32.Build.0 = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Debug|x86.Build.0 = Debug|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|iPhone.ActiveCfg = Release|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|iPhone.Build.0 = Release|iPhone
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|Mixed Platforms.ActiveCfg = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|Mixed Platforms.Build.0 = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|Win32.ActiveCfg = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|Win32.Build.0 = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|x86.ActiveCfg = Release|iPhoneSimulator
+		{285BADF6-5FF0-4791-A677-0E36DF014453}.Release|x86.Build.0 = Release|iPhoneSimulator
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|Win32.ActiveCfg = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D64918B-B584-45E6-9688-8A046EB26FCC}.Release|x86.Build.0 = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|Win32.ActiveCfg = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.ActiveCfg = Release|Any CPU
+		{49384DDB-FD5C-47C8-BD08-E4B824187FE1}.Release|x86.Build.0 = Release|Any CPU
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|Win32.ActiveCfg = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|x86.ActiveCfg = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Debug|x86.Build.0 = Debug|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|Win32.ActiveCfg = Release|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|x86.ActiveCfg = Release|x86
+		{4B9A9A4A-7860-4628-84F0-2F96847608EC}.Release|x86.Build.0 = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|Win32.ActiveCfg = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.ActiveCfg = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Debug|x86.Build.0 = Debug|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|Win32.ActiveCfg = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.ActiveCfg = Release|x86
+		{6B441813-A82D-46DF-92DA-6366B3376F64}.Release|x86.Build.0 = Release|x86
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|Win32.Build.0 = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Debug|x86.Build.0 = Debug|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|Win32.Build.0 = Release|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|x86.ActiveCfg = Release|Any CPU
+		{E392B044-B6C3-4AD4-8571-D2E4C74FFA15}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = retroTouch\retroTouch.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> Added iOS projects

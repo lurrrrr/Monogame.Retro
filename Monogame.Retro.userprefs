@@ -1,16 +1,32 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="libretro.mono\Wrapper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="libretro.monotouch/Wrapper.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="libretro.mono\Wrapper.cs" Line="258" Column="1" />
       <File FileName="retroConsole\Main.cs" Line="16" Column="4" />
+=======
+      <File FileName="retroConsole/Main.cs" Line="3" Column="1" />
+      <File FileName="retroTouch/retroTouchViewController.cs" Line="35" Column="19" />
+      <File FileName="libretro.monotouch/Wrapper.cs" Line="67" Column="3" />
+>>>>>>> Added iOS projects
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+<<<<<<< HEAD
           <Node name="libretro.mono" expanded="True" selected="True" />
+=======
+          <Node name="libretro.mono" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+          <Node name="libretro.monotouch" expanded="True" />
+>>>>>>> Added iOS projects
           <Node name="libretro.utilities" expanded="True" />
           <Node name="retroConsole" expanded="True" />
+          <Node name="retroTouch" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
